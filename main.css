@@ -113,6 +113,8 @@ li{
 /*==============================*/
 /*==============================*/
 .main{
+    margin: auto;
+    max-width: 1350px;
     display: grid;
     grid-template-columns: 6fr 6fr;
     align-items: center;
