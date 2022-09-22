@@ -126,14 +126,17 @@
     .column-img img{
       width: 320px;
       height: 188px;
-  }
-  .column-text .p{
-      width: 80%;
-  }
-  .column-text a{
-      padding: 7px 20px;
-      margin-left: 60px;
-  }
+    }
+    .column-text .p{
+        width: 80%;
+    }
+    .column-text a{
+        padding: 7px 20px;
+        margin-left: 60px;
+    }
+    .box{
+      width: 90%;
+    }
 }
 @media (max-width: 425px) {
   .main-ctn a{
