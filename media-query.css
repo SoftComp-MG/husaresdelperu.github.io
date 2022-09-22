@@ -89,9 +89,6 @@
     .navbar.show .menu-list li a{
       margin-left: 0px;
     }
-    .selectbox {
-      width: 100%;
-    }
   }
   @media (max-width: 425px) {
     .navbar .logo a{
@@ -150,5 +147,14 @@
   .column-text a{
     padding: 7px 20px;
     margin-left: 30px;
-}
+  }
+  .select li a{
+    font-size: 1.3rem;
+  }
+  /* .select{
+    display: none;
+  }
+  .select:focus{
+    display: block;
+  } */
 }

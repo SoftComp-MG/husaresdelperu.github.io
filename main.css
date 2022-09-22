@@ -5,6 +5,7 @@
     --font-color-2: #676A8B;
     --font-color-3: #FFFFFF;
     --font-color-4: #232323;
+    --font-color-5: #FF2738;
     --border:   #00A8FA;
     --font-size-nav: 1.8rem;
     --font-size-h1: 4rem;
@@ -111,6 +112,7 @@ li{
     color: var(--font-color-4);
 }
 /*==============================*/
+/*main*/
 /*==============================*/
 .main{
     margin: auto;
@@ -171,6 +173,7 @@ li{
     height: 479px;
 }
 /*==============================*/
+/*consolidado*/
 /*==============================*/
 .consolidado{
     padding-top: 100px;
@@ -253,6 +256,7 @@ li{
     color: var(--font-color-3);
 }
 /*==============================*/
+/*profam*/
 /*==============================*/
 .profam{
     padding-top: 60px;
@@ -265,108 +269,112 @@ li{
     text-align: center;
 }
 .list-ctn{
-	width: 70%;
+    width: 70%;
 	max-width: 1200px;
 	margin: auto;
-	padding: 20px 0;
+    padding: 20px 0;
 }
-.selectbox{
-	width: 100%;
-	margin: auto;
-	position: relative;
+.search{
+    position: relative;
+}
+.search i{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--font-color-4);
+    font-size: 1.5rem;
+    pointer-events: none;
+}
+.search input{
+    background: var(--font-color-3);
+    box-shadow: var(--box-shadow);
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1.7rem;
+    border-radius: 5px;
+    padding: 0 20px 0 43px;
+    border: 1px solid transparent;
+    transition: all 600ms ease;
+}
+.search:hover input{
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 .select{
-	background: var(--font-color-3);
-	width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
 	box-shadow: var(--box-shadow);
+	max-height: 200px;
+	overflow: auto;
+	width: 100%;
 	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	transition: .3s ease all;
 	margin-bottom: 30px;
 	padding: 10px;
 	position: relative;
 	z-index: 1;
 	border: 2px solid transparent;
+
+    
+    /* display: none;
+    transition: all 300ms ease; */
 }
-.select.active,
-.select:hover{
-	box-shadow: var(--box-shadow);
-    outline: none;
-}
-.select.active:before{
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-	border-top: 15px solid var(--font-color-3);
-	border-right: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid transparent;
-	position: absolute;
-	bottom: -30px;
-	left: calc(50% - 15px);
-}
-.select i{
-	font-size: 3.6rem;
-	margin-left: 30px;
-	color: var(--font-color-4);
-}
-.h3{
-	color: var(--font-color-4);
-}
-.opciones{
-	background: var(--font-color-3);
-	border-radius: 5px;
-	box-shadow: var(--box-shadow);
-	max-height: 280px;
-	overflow: auto;
-	z-index: 100;
-	width: 100%;
-	display: none;
-}
-.opciones.active{
-	display: block;
-	animation: fadeIn .3s forwards;
+/* .select.active{
+    display: block;
+    
+    animation: fadeIn 300ms forwards;
 }
 @keyframes fadeIn{
 	from {
-		transform: translateY(-200px) scale(.5);
+		clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 	}
 	to {
-		transform: translateY(0) scale(1);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 	}
-}
-.contenido-opcion{
-	width: 100%;
-	display: flex;
-	align-items: center;
-	transition: .3s ease all;
-}
-.opciones .contenido-opcion{
-	padding: 20px;
-}
-.opciones::-webkit-scrollbar{
+} */
+.select::-webkit-scrollbar{
     width: 7px;
     background: var(--font-color-2);
     border-radius: 0 8px 8px 0;
 }
-.opciones::-webkit-scrollbar-thumb{
+.select::-webkit-scrollbar-thumb{
     background: var(--font-color-4);
     border-radius: 0 8px 8px 0;
 }
-.opciones .contenido-opcion:hover{
+.select .contenido-opcion:hover{
 	background: var(--font-color-2);
 }
-.opciones .contenido-opcion:hover .h3{
-	color: #fff;
+.select li{
+    margin: 5px 20px;
+}
+.select li a{
+    font-size: var(--font-size-p);
+    color: var(--font-color-4);
+}
+.n_profesional{
+    position: relative;
+}
+.download{
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+}
+/* .select .hidden a{
+    color: var(--font-color-5);
+} */
+.filtro{
+    display: none;
 }
 /*==============================*/
+/*registro*/
 /*==============================*/
 .register{
     margin: auto;
     max-width: 1200px;
+    margin-bottom: 40px;
 }
 .register-ctn p{
     padding-top: 20px;

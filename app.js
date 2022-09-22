@@ -17,22 +17,23 @@ const cancelBtn = document.querySelector(".cancel-btn");
     }
 
 //select
-const select = document.querySelector('#select');
-const opciones = document.querySelector('#opciones');
-const contentSelect = document.querySelector('#select .content-select');
-const hiddenInput = document.querySelector('#inputSelect');
+document.addEventListener("keyup", e=>{
 
-document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
-	opcion.addEventListener('click', (e) => {
-		e.preventDefault();
-		contentSelect.innerHTML = e.currentTarget.innerHTML;
-		select.classList.toggle('active');
-		opciones.classList.toggle('active');
-		hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
-	});
-});
+  if (e.target.matches("#buscador")){
 
-select.addEventListener('click', () => {
-	select.classList.toggle('active');
-	opciones.classList.toggle('active');
-});
+      if (e.key ==="Escape")e.target.value = ""
+
+      document.querySelectorAll(".n_profesional").forEach(nombre =>{
+
+        nombre.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?nombre.classList.remove("filtro")
+            :nombre.classList.add("filtro")
+      })
+
+  }
+})
+//active
+//const menu = document.getElementById('buscador');
+//  menu.addEventListener('click', () => {
+//  document.getElementById('lista-profesionales').classList.toggle('active');
+//});
